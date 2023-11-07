@@ -3,11 +3,9 @@ package lan.zold.models;
 import java.util.Random;
 
 public class Generate {
-    Random rd;
-    public Generate(){
-        rd= new Random();
-    }
-    public Long genNum(){
+    
+    public static Long genNum(){
+        Random rd= new Random();
         Long num = rd.nextLong();
         return num;
     }
