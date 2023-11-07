@@ -6,14 +6,15 @@ import java.io.PrintWriter;
 public class Writefile {
     public void tryWriteNums() throws FileNotFoundException{
         PrintWriter pw = new PrintWriter("szamok.txt");
-        int count = 1000;
+        int count = 2000000;
         for (int i = 0; i < count; i++) {
             Long num = Generate.genNum();
             pw.println(num);
         }
         pw.close();
+        System.out.println("Sikeres írás.");
     }
-    public void writeNums() throws FileNotFoundException{
+    public void writeNums(){
         try {
             tryWriteNums();
         } catch (FileNotFoundException e) {
